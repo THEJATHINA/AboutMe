@@ -8,7 +8,7 @@ export default function Projects() {
     {
       id: 1,
       title: "Neon Pulse App Promo",
-      thumbnail: "/featured-project.png", // reusing for demo
+      thumbnail: `${import.meta.env.BASE_URL}featured-project.png`, // reusing for demo
       challenge: "Create a high-energy promotional video for a gen-Z fitness app that stands out in a crowded market.",
       solution: "Developed a kinetic typography system combined with fast-paced 3D abstract environments.",
       outcome: "Increased app downloads by 40% in the first month and won a student design award.",
@@ -17,7 +17,7 @@ export default function Projects() {
     {
       id: 2,
       title: "Zenith Banking Identity",
-      thumbnail: "/featured-project.png", // reusing for demo
+      thumbnail: `${import.meta.env.BASE_URL}featured-project.png`, // reusing for demo
       challenge: "Modernize a traditional bank's visual identity through motion to attract younger demographics.",
       solution: "Designed a clean, fluid motion system using soft gradients, glassmorphism, and subtle micro-interactions.",
       outcome: "Successfully rebranded across all digital touchpoints with highly positive user feedback.",

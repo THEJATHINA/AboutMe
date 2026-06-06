@@ -27,7 +27,7 @@ export default function FeaturedWork() {
         >
           <div className="featured-image-container">
             <img 
-              src="/featured-project.png" 
+              src={`${import.meta.env.BASE_URL}featured-project.png`} 
               alt="Featured Project" 
               className="featured-image"
             />

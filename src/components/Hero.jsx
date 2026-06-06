@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="hero-image-glow"></div>
           <div className="hero-image-container">
             <img 
-              src="/portrait.png" 
+              src={`${import.meta.env.BASE_URL}portrait.png`} 
               alt="Thejashri T - Portrait" 
               className="hero-image"
             />

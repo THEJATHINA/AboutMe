@@ -24,7 +24,7 @@ export default function About() {
             <div className="about-image-wrapper">
               <div className="about-abstract-shape"></div>
               <img 
-                src="/portrait.png" 
+                src={`${import.meta.env.BASE_URL}portrait.png`} 
                 alt="Creative Process" 
                 className="about-image"
               />

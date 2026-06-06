@@ -1,0 +1,105 @@
+:root {
+  /* Colors - Light Mode (Default) */
+  --bg-color: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569; /* Slate 600 */
+  --purple-primary: #4C1D95;
+  --purple-secondary: #6D28D9;
+  --purple-accent: #C4B5FD;
+  --card-bg: #F8FAFC; /* Very light slate */
+  --border-color: #E2E8F0;
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --section-padding: 6rem 2rem;
+  --max-width: 1200px;
+}
+
+[data-theme='dark'] {
+  /* Colors - Dark Mode */
+  --bg-color: #0F172A; /* Deep slate */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --purple-primary: #C4B5FD; /* Inverted to be lighter on dark */
+  --purple-secondary: #A78BFA;
+  --purple-accent: #4C1D95;
+  --card-bg: #1E293B; /* Slightly lighter slate */
+  --border-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--purple-primary), var(--purple-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-secondary);
+}

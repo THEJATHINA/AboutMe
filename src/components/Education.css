@@ -1,0 +1,76 @@
+.edu-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.edu-timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+}
+
+.edu-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.edu-timeline-marker {
+  position: absolute;
+  top: 8px;
+  left: -5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  box-shadow: 0 0 0 4px var(--bg-color);
+}
+
+.edu-timeline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-duration {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.edu-degree {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.edu-institution {
+  font-size: 1.1rem;
+  color: var(--purple-primary);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.edu-achievements {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .edu-timeline-item {
+    padding-left: 2.5rem;
+  }
+}

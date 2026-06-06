@@ -1,0 +1,112 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 4rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 6px;
+  left: 17px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 3px solid var(--purple-primary);
+  box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  background: var(--purple-primary);
+  box-shadow: 0 0 0 6px rgba(109, 40, 217, 0.2);
+}
+
+.timeline-content {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(5px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border-color: var(--purple-accent);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-duration {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  background: rgba(109, 40, 217, 0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  color: var(--purple-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 16px;
+  }
+  
+  .timeline-marker {
+    left: 9px;
+  }
+  
+  .timeline-item {
+    padding-left: 3rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}
